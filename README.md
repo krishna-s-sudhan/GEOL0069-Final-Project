@@ -7,9 +7,8 @@
 
 <p align="center">
     Using K-means classification to cluster sea surface temperatures for submarine groundwater discharge applications
-  </p>
+</p>
 
-<!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -25,6 +24,9 @@
         <li><a href="#implementing-k-means-clustering">Implementing K-Means Clustering</a></li>
         <li><a href="#plotting-results">Plotting Results</a></li>
       </ul>
+    </li>
+    <li>
+      <a href="#environmental-cost">Environmental Cost</a>
     </li>
     <li>
       <ul>
@@ -130,6 +132,18 @@ The final step is to plot our results. First all five bands are plotted, then a 
   <img src="images/warmest_sst_clusters_plot.png" />
 </p>
 
+## Environmental Cost
+
+The environmental cost of this project comes mainly in the form of energy usage. As my code was written on a jupyter notebook locally on my computer, these are the main costs:
+
+1. energy usage by my PC to run code
+2. energy usage of hosting files on GitHub repo
+3. energy usage through internet searches
+
+All these activities have a very low energy usage. The energy cost of my local PC is also dependent on the source of the electricity used to charge my laptop (renewable or fossil fuels). My provider EDF energy published their energy mix most recently for April 2023 to March 2024. In this report 20% of their energy was said to come from renewable sources. 
+
+One way to make this more reliable would have been to use the Google Colaboratory could computing environment. While google does not yet produce net-zero emissions (aiming for this by 2030), they have been carbon neutral since 2007 through renewable energy and carbon credit purchases. Since 2017 they have matched their energy usage with investment in renewable energy. While this seems on the surface to be a better solution to running code locally on my laptop, we would also need to consider the energy cost of me using my PC to access the internet to access Google Colab, and the energy cost of my internet use to download and upload files from the USGS and to my google drive.
+
 ## References
 
 D'elia, C.F., Webb, K.L. and Porter, J.W., 1981. Nitrate-rich groundwater inputs to Discovery Bay, Jamaica: a significant source of N to local coral reefs?. Bulletin of Marine Science, 31(4), pp.903-910.
@@ -151,4 +165,8 @@ https://www.usgs.gov/landsat-missions/landsat-7
 https://www.usgs.gov/faqs/what-landsat-7-etm-slc-data
 
 https://www.usgs.gov/faqs/why-do-landsat-7-level-1-products-contain-two-thermal-bands
+
+https://www.edfenergy.com/fuel-mix
+
+https://blog.google/outreach-initiatives/sustainability/our-third-decade-climate-action-realizing-carbon-free-future/
 

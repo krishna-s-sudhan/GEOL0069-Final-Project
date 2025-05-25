@@ -1,4 +1,13 @@
-# Investigating Submarine Groundwater Discharge using Sea-Surface Temperature and K-Means Clustering
+<h1 align="center">Investigating Submarine Groundwater Discharge using Sea-Surface Temperature and K-Means Clustering</h1>
+
+![title_banner](images/merged.pdf)
+
+
+<p align="center">
+    Using K-means classification to cluster sea surface temperatures for submarine groundwater discharge applications
+  </p>
+
+
 
 ## Introduction & Description of Problem
 

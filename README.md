@@ -19,21 +19,13 @@
     <li>
       <a href="#steps-taken">Steps Taken</a>
       <ul>
-        <li><a href="#background">Background</a></li>
-        <li><a href="#the-sentinel-2-satellite">The SENTINEL-2 Satellite</a></li>
-        <li><a href="#machine-learning-methodology-k-means-clustering">Machine Learning Methodology: K-Means Clustering</a></li>
+        <li><a href="#1.-obtaining-data">Obtaining Data</a></li>
+        <li><a href="#2.-calculating-sea-surface-temperature-from-radiance">Calculating Sea Surface Temperature from Radiance</a></li>
+        <li><a href="#3.-creating-a-mask-for-land">Creating a Mask for Land</a></li>
+        <li><a href="#4.-implementing-k-means-clustering">Implementing K-Means Clustering</a></li>
+        <li><a href="#5.-plotting-results">Plotting Results</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#datasets-used">Datasets Used</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
       <ul>
         <li><a href="#references">References</a></li>
       </ul>

@@ -136,13 +136,17 @@ The final step is to plot our results. First all five bands are plotted, then a 
 
 The environmental cost of this project comes mainly in the form of energy usage. As my code was written on a jupyter notebook locally on my computer, these are the main costs:
 
-1. energy usage by my PC to run code
-2. energy usage of hosting files on GitHub repo
-3. energy usage through internet searches
+1. energy usage by PC to run code - ~0.12 kWh
+2. energy usage of hosting files on GitHub repo - ~0.03 kWh/year
+3. energy usage through internet searches - ~0.0002 kWh
+
+Bringing the total energy usage for the project to a negligible 0.15 kWh. This corresponds to around 57g of CO2. This is 33 times less than the energy needs of one 15 minute shower (~4.96 kWh, 1.88 kg CO2).
 
 All these activities have a very low energy usage. The energy cost of my local PC is also dependent on the source of the electricity used to charge my laptop (renewable or fossil fuels). My provider EDF energy published their energy mix most recently for April 2023 to March 2024. In this report 20% of their energy was said to come from renewable sources. 
 
 One way to make this more reliable would have been to use the Google Colaboratory could computing environment. While google does not yet produce net-zero emissions (aiming for this by 2030), they have been carbon neutral since 2007 through renewable energy and carbon credit purchases. Since 2017 they have matched their energy usage with investment in renewable energy. While this seems on the surface to be a better solution to running code locally on my laptop, we would also need to consider the energy cost of me using my PC to access the internet to access Google Colab, and the energy cost of my internet use to download and upload files from the USGS and to my google drive.
+
+Overall, my project does not have a direct impact on sustainability or reducing CO2 emissions. However, the relatively very low energy cost justifies it. 
 
 ## References
 

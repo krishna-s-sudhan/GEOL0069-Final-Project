@@ -1,6 +1,8 @@
 <h1 align="center">Investigating Submarine Groundwater Discharge using Sea-Surface Temperature and K-Means Clustering</h1>
 
-![title_banner](images/merged.pdf)
+<p align="center">
+  <img src="images/merged.jpg" />
+</p>
 
 
 <p align="center">
@@ -29,9 +31,13 @@ The bands 3 and 4 detect red and near infra-red light levels respectively, and w
 
 The Landsat-7 satelite collected data until January 19, 2024. Most of our data is from 2023. Unfortunately, this means that the data has some slight gaps in it, due to the failure of the Scan Line Corrector (SLC) in 2003. The effects are illustrated in the images below and is seen in our results:
 
-![slc.jpg](images/with-without-SLC.jpg)
+<p align="center">
+  <img src="images/with-without-SLC.jpg" />
+</p>
 
-![slc2.jpg](images/slc.jpeg)
+<p align="center">
+  <img src="images/slc.jpeg" />
+</p>
 
 ### 2. Calculating Sea Surface Temperature from Radiance
 
@@ -82,6 +88,11 @@ A more interesting solution to this is to apply an unsupervised (or better yet, 
 K-Means clustering is an unsupervised learning method, meaning its training data is not labelled (differentiating it from supervised learning methods). It is centroid based, and in this case the centroids are the mean value of each cluster. The algorithm works by maximising the distance between centroids, while minimizing the variance within the cluster associated with each centroid. One of the key metrics for this is the sum of squared errors, which represents variance within a dataset and is minimized by the algorithm. K-means is scaleable, fast and easy to understand machine learning method, which has made it one of the most popular. On the other hand, the method is sensitive to outliers, which is why the higher land temperatures in our area are masked.
 
 We go a step further by choosing the ckmeans-1d-dp algorithm for this project. This algorithm is optmized for univariate (1-dimensional) applications, such as SST. Regular K-means applications, such as through the scikit-learn package are optimised for higher dimensional data. It originated with the ckmeans.1d.dp algorithm written for the R programming language (Wand and Song, 2011). Here we use a python interface ckmeans-1d-dp.
+
+<p align="center">
+  <img src="images/ckmeans-info.png" />
+</p>
+
 
 ### 5. Plotting Results
 

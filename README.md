@@ -9,9 +9,36 @@
     Using K-means classification to cluster sea surface temperatures for submarine groundwater discharge applications
   </p>
 
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#introduction-and-description-of-problem">Introduction and Description of Problem</a>
+      <ul>
+        <li><a href="#background">Background</a></li>
+        <li><a href="#the-sentinel-2-satellite">The SENTINEL-2 Satellite</a></li>
+        <li><a href="#machine-learning-methodology-k-means-clustering">Machine Learning Methodology: K-Means Clustering</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#datasets-used">Datasets Used</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+      <ul>
+        <li><a href="#references">References</a></li>
+      </ul>
+  </ol>
+</details>
 
 
-## Introduction & Description of Problem
+## Introduction and Description of Problem
 
 Submarine Groundwater Discharge (SGD) is a major flux of terrestrial water to the ocean, and plays an important role in several processes. A large flux of nutrients is transported in the dissolved load of SGD, typically greater than the flux from rivers (Santos et al. 2021), influencing seawater biodiversity. This process is also affected by anthropogenic activities, with excess nutrient runoff from fertlizers causing eutrophicatin (D'Elia et al., 1981). The relative freshness of SGD compared to seawater also makes it ideal for desalination and human consumption where other sources of freshwater are not as readily available (Post et al., 2013).
 
@@ -97,3 +124,34 @@ We go a step further by choosing the ckmeans-1d-dp algorithm for this project. T
 ### 5. Plotting Results
 
 The final step is to plot our results. First all five bands are plotted, then a seperate plot shows us the two warmest bands. These SST 'anomalies' are typically used alongside data of sea surface colour (indicating photosynthesis and therefore higher nutrient fluxes through groundwater). Together they can indicate potential subsurface groundwater discharge.
+
+<p align="center">
+  <img src="images/sst_clusters_plot.png" />
+</p>
+
+<p align="center">
+  <img src="images/warmest_sst_clusters_plot.png" />
+</p>
+
+## References
+
+D'elia, C.F., Webb, K.L. and Porter, J.W., 1981. Nitrate-rich groundwater inputs to Discovery Bay, Jamaica: a significant source of N to local coral reefs?. Bulletin of Marine Science, 31(4), pp.903-910.
+
+Santos, I.R., Chen, X., Lecher, A.L., Sawyer, A.H., Moosdorf, N., Rodellas, V., Tamborski, J., Cho, H.M., Dimova, N., Sugimoto, R. and Bonaglia, S., 2021. Submarine groundwater discharge impacts on coastal nutrient biogeochemistry. Nature Reviews Earth & Environment, 2(5), pp.307-323.
+
+Post, V.E., Groen, J., Kooi, H., Person, M., Ge, S. and Edmunds, W.M., 2013. Offshore fresh groundwater reserves as a global phenomenon. Nature, 504(7478), pp.71-78.
+
+Burnett, W.C., Aggarwal, P.K., Aureli, A., Bokuniewicz, H., Cable, J.E., Charette, M.A., Kontar, E., Krupa, S., Kulkarni, K.M., Loveless, A. and Moore, W.S., 2006. Quantifying submarine groundwater discharge in the coastal zone via multiple methods. Science of the total Environment, 367(2-3), pp.498-543.
+
+Caineta, J., Thomas, B.F. and Bain, D.J., 2022. Submarine groundwater discharge detection through remote sensing: An application of Landsat 7 and 8 in Hawaiʻi and Ireland. Remote Sensing of Environment, 279, p.113109.
+
+Wang, H. and Song, M., 2011. Ckmeans. 1d. dp: optimal k-means clustering in one dimension by dynamic programming. The R journal, 3(2), p.29.
+
+## Sources
+
+https://www.usgs.gov/landsat-missions/landsat-7
+
+https://www.usgs.gov/faqs/what-landsat-7-etm-slc-data
+
+https://www.usgs.gov/faqs/why-do-landsat-7-level-1-products-contain-two-thermal-bands
+

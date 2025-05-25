@@ -19,16 +19,18 @@
     <li>
       <a href="#steps-taken">Steps Taken</a>
       <ul>
-        <li><a href="#1.-obtaining-data">Obtaining Data</a></li>
-        <li><a href="#2.-calculating-sea-surface-temperature-from-radiance">Calculating Sea Surface Temperature from Radiance</a></li>
-        <li><a href="#3.-creating-a-mask-for-land">Creating a Mask for Land</a></li>
-        <li><a href="#4.-implementing-k-means-clustering">Implementing K-Means Clustering</a></li>
-        <li><a href="#5.-plotting-results">Plotting Results</a></li>
+        <li><a href="#obtaining-data">Obtaining Data</a></li>
+        <li><a href="#calculating-sea-surface-temperature-from-radiance">Calculating Sea Surface Temperature from Radiance</a></li>
+        <li><a href="#creating-a-mask-for-land">Creating a Mask for Land</a></li>
+        <li><a href="#implementing-k-means-clustering">Implementing K-Means Clustering</a></li>
+        <li><a href="#plotting-results">Plotting Results</a></li>
       </ul>
     </li>
+    <li>
       <ul>
         <li><a href="#references">References</a></li>
       </ul>
+    </li>
   </ol>
 </details>
 
@@ -45,7 +47,7 @@ This final project for GEOL0069 is inspired by this paper, but to remain within 
 
 ## Steps Taken
 
-### 1. Obtaining Data
+### Obtaining Data
 
 The remotely sensed data for this project was sourced from the Landsat-7 Mission. The Enhanced Thematic Mapper Plus (ETM+) instrument on board the satelite contained a thermal infrared channel that was a four-fold improvement on previous itterations and contained 8 different spectral bands. The most important here is the thermal band, that produced infra-red radiance measurements of the earth surface and can be used to calculate sea surface temperature. This band produced data with a 60m spatial resolution and is available as low- and high-gain products. We use the high-gain product as it has a higher sensitivity.
 
@@ -61,7 +63,7 @@ The Landsat-7 satelite collected data until January 19, 2024. Most of our data i
   <img src="images/slc.jpeg" />
 </p>
 
-### 2. Calculating Sea Surface Temperature from Radiance
+### Calculating Sea Surface Temperature from Radiance
 
 The first step for this was calibrating using the MTL metadata file associated with our Landsat-7 data. This involves parsing the MTL file to automatically find the values of maximum radiance and certain quantiles. We then convert from radiance to temperature (in Kelvin) using the following formulae:
 
@@ -85,7 +87,7 @@ T & = \text{brightness temperature (Kelvin)} \\
 
 This is then converted to degrees Celcius, and plotted as Figure 1
 
-### 3. Creating a Mask for Land
+### Creating a Mask for Land
 
 For SGD applications we are only interested in sea surface temperature, and as such the land surface temperature can result in skewed results as the land is typically much warmer than the sea. Therefore we need to find a way to create a water mask that allows us only to take water temperatures into account. To achieve this we use two methods. First, by using the red and infrared bands of Landsat 7, we can use the Normalised Difference Vegetation Index (NDVI) to differentiate between land and sea, where water is disinguished by NDVI values below -0.05. The following equation is used to calculate NDVI:
 
@@ -105,7 +107,7 @@ We also make the assumption that seawater temperatures will not exceed 35 degree
 
 A more interesting solution to this is to apply an unsupervised (or better yet, supervised) learning method to differentiate between land and sea. To stay within the scope of this project this was not performed.
 
-### 4. Implementing K-Means Clustering
+### Implementing K-Means Clustering
  
 K-Means clustering is an unsupervised learning method, meaning its training data is not labelled (differentiating it from supervised learning methods). It is centroid based, and in this case the centroids are the mean value of each cluster. The algorithm works by maximising the distance between centroids, while minimizing the variance within the cluster associated with each centroid. One of the key metrics for this is the sum of squared errors, which represents variance within a dataset and is minimized by the algorithm. K-means is scaleable, fast and easy to understand machine learning method, which has made it one of the most popular. On the other hand, the method is sensitive to outliers, which is why the higher land temperatures in our area are masked.
 
@@ -116,7 +118,7 @@ We go a step further by choosing the ckmeans-1d-dp algorithm for this project. T
 </p>
 
 
-### 5. Plotting Results
+### Plotting Results
 
 The final step is to plot our results. First all five bands are plotted, then a seperate plot shows us the two warmest bands. These SST 'anomalies' are typically used alongside data of sea surface colour (indicating photosynthesis and therefore higher nutrient fluxes through groundwater). Together they can indicate potential subsurface groundwater discharge.
 

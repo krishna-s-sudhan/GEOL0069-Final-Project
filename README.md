@@ -15,6 +15,9 @@
   <ol>
     <li>
       <a href="#introduction-and-description-of-problem">Introduction and Description of Problem</a>
+    </li>
+    <li>
+      <a href="#steps-taken">Steps Taken</a>
       <ul>
         <li><a href="#background">Background</a></li>
         <li><a href="#the-sentinel-2-satellite">The SENTINEL-2 Satellite</a></li>

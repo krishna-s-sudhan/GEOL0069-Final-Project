@@ -77,6 +77,7 @@ $$
 T = \frac{K_2}{\ln\left(\frac{K_1}{L_\lambda} + 1\right)}
 $$
 
+$$
 \begin{aligned}
 Where: \\
 L_\lambda & = \text{Spectral radiance at the sensor's aperture (W/(m}^2\cdot\text{sr}\cdot\mu\text{m))} \\
@@ -86,6 +87,7 @@ Q_{\text{CALMAX}}, Q_{\text{CALMIN}} & = \text{Maximum and minimum quantized cal
 K_1, K_2 & = \text{Calibration constants for thermal conversion (from MTL file)} \\
 T & = \text{brightness temperature (Kelvin)} \\
 \end{aligned}
+$$
 
 This is then converted to degrees Celcius, and plotted as Figure 1
 

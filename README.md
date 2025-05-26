@@ -13,6 +13,9 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
+      <a href="#video-description">Video Description</a>
+    </li>
+    <li>
       <a href="#introduction-and-description-of-problem">Introduction and Description of Problem</a>
     </li>
     <li>
@@ -35,6 +38,9 @@
     </li>
   </ol>
 </details>
+
+## Video Description
+[![Here's me describing the project!](images/thumbnail.jpg)](https://www.youtube.com/watch?v=jOCz61mi1ao)
 
 
 ## Introduction and Description of Problem

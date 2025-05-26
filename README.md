@@ -105,7 +105,7 @@ Where:
 - **RED** is the reflectance in the red band
 
 
-Additionally, a DEM can be created of the land and nearby sea, where elevation under 5 meters was considered to be ocean.
+Additionally, a DEM can be created of the land and nearby sea, where elevation under 5 meters was considered to be ocean. To do this we first have to merge the 7 SRTM DEM tiles, and resample and reproject them to collocate them with the Landsat 7 imagery.
 
 We also make the assumption that seawater temperatures will not exceed 35 degrees celcius. Along with this assumption and the DEM and NDVI masks we create a water mask, allowing us to focus on only SST.
 
